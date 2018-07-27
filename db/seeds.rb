@@ -6,6 +6,9 @@ require 'faker'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times{City.create!(name:Faker::LeagueOfLegends.location)}
+
+10.times{Speciality.create!(name:Faker::LeagueOfLegends.summoner_spell,doctor_id:rand(1..10))}
 
 10.times{Doctor.create(first_name: "Dr", last_name: Faker::DragonBall.character, speciality: Faker::ElderScrolls.race, postal_code: 911)}
 
